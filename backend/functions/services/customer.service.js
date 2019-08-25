@@ -22,11 +22,10 @@ class CustomerService{
         this.customers=[
             "9929552033",
             "2518311936",
-            /*"1265934011",
+            "1265934011",
             "4081457102",
-            "4623099785",
             "5452733570",
-            "1088781372",
+            /*"1088781372",
             "9617015739",
             "7846544552",
             "8933783681"*/
@@ -36,7 +35,7 @@ class CustomerService{
     getCustomer(){
         
         return new Promise((res,rej)=>{
-            const i=Math.floor(Math.random() * 2);
+            const i=Math.floor(Math.random() * 5);
             console.log(i+":"+this.customers[i]);
             let ref=db.ref(this.customers[i]);
             console.log(ref.toJSON());
